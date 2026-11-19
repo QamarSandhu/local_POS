@@ -79,5 +79,4 @@ echo -e "${BOLD}${GREEN}                   Backup Created Successfully!         
 echo -e "${BOLD}${GREEN}======================================================================${NC}\n"
 echo -e "Backup File: ${BOLD}${YELLOW}$ARCHIVE_PATH${NC} ($ARCHIVE_SIZE)"
 echo -e "Contents:    PostgreSQL Database SQL Dump + Uploaded Store Images + Metadata\n"
-EOF
 

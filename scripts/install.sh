@@ -305,5 +305,4 @@ echo -e "${BOLD}${YELLOW}Next Steps:${NC}"
 echo -e "1. Open ${BLUE}http://localhost:3000${NC} in your browser to log in or register your store."
 echo -e "2. Navigate to ${BLUE}Settings -> License & Subscription${NC} to enter your digitally signed license key."
 echo -e "3. To check service logs at any time: ${YELLOW}journalctl -u letsbuyit-api -f${NC}\n"
-EOF
 

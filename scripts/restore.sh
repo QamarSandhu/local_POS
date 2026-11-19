@@ -97,5 +97,4 @@ echo -e "${BOLD}${GREEN}                   Restoration Completed Successfully!  
 echo -e "${BOLD}${GREEN}======================================================================${NC}\n"
 echo -e "API Status: ${BOLD}$API_STATUS${NC}"
 echo -e "Web Status: ${BOLD}$WEB_STATUS${NC}\n"
-EOF
 

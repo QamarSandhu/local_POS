@@ -137,5 +137,4 @@ echo -e "${BOLD}${GREEN}========================================================
 echo -e "Frontend:  ${BOLD}${BLUE}http://localhost:3000${NC}"
 echo -e "Backend:   ${BOLD}${BLUE}http://localhost:3001${NC}"
 echo -e "Database, uploaded images, and license key preserved intact.\n"
-EOF
 

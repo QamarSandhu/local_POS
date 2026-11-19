@@ -1,7 +1,7 @@
 {
   "application": "Let's Buy It Universal POS & Commerce",
   "version": "1.0.0",
-  "buildDate": "2026-11-19T08:44:14.080Z",
+  "buildDate": "2026-11-19T08:54:15.938Z",
   "releaseId": "7a9f51b",
   "databaseMigrationVersion": "1789000000000-CreateLicensesAndPaymentRecords",
   "storageDriver": "local",
