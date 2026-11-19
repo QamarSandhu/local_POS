@@ -1,0 +1,31 @@
+import { Business } from './business.entity';
+import { Customer } from './customer.entity';
+import { OrderItem } from './order-item.entity';
+import { User } from './user.entity';
+export declare class Order {
+    id: string;
+    businessId: string;
+    clientOrderId: string;
+    source: string;
+    status: string;
+    customerId: string;
+    salesmanId: string;
+    tableNumber: string;
+    subtotal: number;
+    tax: number;
+    discount: number;
+    deliveryFee: number;
+    total: number;
+    paymentMethod: string;
+    paymentStatus: string;
+    type: string;
+    deliveryAddress: string;
+    customerNotes: string;
+    cancelReason: string;
+    business: Business;
+    customer: Customer;
+    salesman: User;
+    items: OrderItem[];
+    createdAt: Date;
+    updatedAt: Date;
+}

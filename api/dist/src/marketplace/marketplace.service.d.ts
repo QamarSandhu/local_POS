@@ -1,0 +1,80 @@
+import { Repository, DataSource } from 'typeorm';
+import { Business } from '../database/entities/business.entity';
+import { Category } from '../database/entities/category.entity';
+import { OrderItem } from '../database/entities/order-item.entity';
+import { Customer } from '../database/entities/customer.entity';
+import { BusinessType } from '../database/entities/business-type.entity';
+import { City } from '../database/entities/city.entity';
+export declare class MarketplaceService {
+    private businessRepository;
+    private categoryRepository;
+    private customerRepository;
+    private businessTypeRepository;
+    private cityRepository;
+    private dataSource;
+    constructor(businessRepository: Repository<Business>, categoryRepository: Repository<Category>, customerRepository: Repository<Customer>, businessTypeRepository: Repository<BusinessType>, cityRepository: Repository<City>, dataSource: DataSource);
+    getActiveCities(): Promise<City[]>;
+    getActiveBusinessTypes(): Promise<{
+        id: string;
+        name: string;
+        slug: string;
+        description: string | null;
+        icon: string | null;
+        displayOrder: number;
+        businessCount: number;
+    }[]>;
+    getBusinesses(typeIdOrSlug?: string, cityIdOrSlug?: string): Promise<Business[]>;
+    getRestaurants(typeOrCity?: string, cityIdOrSlug?: string): Promise<Business[]>;
+    getRestaurantMenu(slug: string): Promise<{
+        business: {
+            id: string;
+            name: string;
+            slug: string;
+            description: string;
+            logo: string;
+            coverImage: string;
+            phone: string;
+            address: string;
+            city: string;
+            cities: City[];
+            isFeatured: boolean;
+            settings: import("../database/entities").BusinessSettings;
+        };
+        menu: Category[];
+    }>;
+    checkout(data: any): Promise<{
+        customer: {
+            id: string;
+            name: string;
+            phone: string;
+            email: string;
+            address: string;
+        };
+        businessPhone: string | null;
+        businessName: string | null;
+        id: string;
+        businessId: string;
+        clientOrderId: string;
+        source: string;
+        status: string;
+        customerId: string;
+        salesmanId: string;
+        tableNumber: string;
+        subtotal: number;
+        tax: number;
+        discount: number;
+        deliveryFee: number;
+        total: number;
+        paymentMethod: string;
+        paymentStatus: string;
+        type: string;
+        deliveryAddress: string;
+        customerNotes: string;
+        cancelReason: string;
+        business: Business;
+        salesman: import("../database/entities").User;
+        items: OrderItem[];
+        createdAt: Date;
+        updatedAt: Date;
+    }>;
+}

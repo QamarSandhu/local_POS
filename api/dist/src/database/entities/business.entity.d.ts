@@ -1,0 +1,37 @@
+import { BusinessMembership } from './business-membership.entity';
+import { BusinessSettings } from './business-settings.entity';
+import { Category } from './category.entity';
+import { Product } from './product.entity';
+import { Order } from './order.entity';
+import { BusinessBilling } from './business-billing.entity';
+import { BusinessType } from './business-type.entity';
+import { City } from './city.entity';
+export declare class Business {
+    id: string;
+    name: string;
+    slug: string;
+    logo: string;
+    coverImage: string;
+    phone: string;
+    address: string;
+    city: string;
+    description: string;
+    isActive: boolean;
+    pricingPlan: string;
+    posPrintsCount: number;
+    activatedAt: Date;
+    isFeatured: boolean;
+    suspendReason: string;
+    featuredUntil: Date;
+    businessTypeId: string | null;
+    businessType: BusinessType;
+    memberships: BusinessMembership[];
+    settings: BusinessSettings;
+    categories: Category[];
+    products: Product[];
+    orders: Order[];
+    billings: BusinessBilling[];
+    cities: City[];
+    createdAt: Date;
+    updatedAt: Date;
+}

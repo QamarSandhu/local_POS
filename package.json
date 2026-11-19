@@ -1,0 +1,16 @@
+{
+  "name": "letsbuyit-deployment",
+  "version": "1.0.0",
+  "description": "Let's Buy It - Self-Hosted Production Build",
+  "private": true,
+  "scripts": {
+    "install": "bash scripts/install.sh",
+    "update": "bash scripts/update.sh",
+    "backup": "bash scripts/backup.sh",
+    "restore": "bash scripts/restore.sh",
+    "start:api": "node api/dist/src/main.js",
+    "start:web": "node web/apps/web/server.js",
+    "migrate": "node api/dist/migrate.js",
+    "seed": "node api/dist/seed-production.js"
+  }
+}
