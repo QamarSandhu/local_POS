@@ -7,6 +7,20 @@ const fs = require("fs");
 const path = require("path");
 const entities = require("./src/database/entities");
 dotenv.config();
+if (!process.env.DB_NAME && !process.env.DATABASE_URL) {
+    const possiblePaths = [
+        path.resolve(process.cwd(), '.env'),
+        path.resolve(process.cwd(), 'config/.env'),
+        path.resolve(__dirname, '../.env'),
+        path.resolve(__dirname, '../../config/.env'),
+    ];
+    for (const envPath of possiblePaths) {
+        if (fs.existsSync(envPath)) {
+            dotenv.config({ path: envPath });
+            break;
+        }
+    }
+}
 const isSelfHosted = process.env.DEPLOYMENT_MODE === 'self-hosted';
 const dbUrl = process.env.DATABASE_URL;
 const explicitSsl = process.env.DB_SSL === 'true';

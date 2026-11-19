@@ -1,14 +1,14 @@
 {
   "application": "Let's Buy It Universal POS & Commerce",
   "version": "1.0.0",
-  "buildDate": "2026-11-19T08:54:15.938Z",
-  "releaseId": "7a9f51b",
+  "buildDate": "2026-11-19T16:45:41.542Z",
+  "releaseId": "d49138b",
   "databaseMigrationVersion": "1789000000000-CreateLicensesAndPaymentRecords",
   "storageDriver": "local",
   "cryptography": "Ed25519",
   "compatibility": {
     "node": ">=20.0.0",
     "postgresql": ">=14.0.0",
-    "os": "Ubuntu LTS (20.04, 22.04, 24.04)"
+    "os": "Windows 10 / 11 / Windows Server (64-bit) & Ubuntu LTS"
   }
 }
